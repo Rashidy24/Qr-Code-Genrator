@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Qr Code Gen</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="qr-box">
+
+            <div class="qr-custmize">
+                <div class="block enter-content" onclick="showForm()">
+                    <div>
+                        <div class="icon" id="iconOne"><i class="fa-solid fa-globe"></i></div>
+                        <div class="text">enter content</div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-plus unique" id="el1"></i>
+                    </div>
+                </div>
+                <form id="form" class="shape">
+                    <label for="my-value">your url or text</label>
+                    <input type="text" placeholder="Text Or Url" id="my-value">
+                </form>
+
+
+                <div class="block design-content" onclick="showShape()">
+                    <div>
+                        <div class="icon" id="iconTwo"><i class="fa-solid fa-qrcode"></i></div>
+                        <div class="text">custmize design</div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-plus unique" id="el2"></i>
+                    </div>
+                </div>
+
+                <div class="shape" id="shape" >
+                    <div></div>
+                    <div data-border="15px 0 15px"></div>
+                    <div data-border="15px 15px 15px 0"></div>
+                    <div data-border-type="dotted"></div>
+                    <div data-border="31% 69% 0% 100% / 100% 0% 100% 0%"></div>
+                    <div data-border="50%"></div>
+                    <div data-border="25%"></div>
+                    <div data-border-type="double"></div>
+                    <div data-border-type="dashed"></div>
+                    <div data-border="0% 100% 13% 87% / 93% 17% 83% 7%"></div>
+                </div>
+            </div>
+
+
+            <div class="qr-show">
+                <div class="img-box" id="new_img">
+                    <img id="image">
+                </div>
+                <div class="buttons">
+                    <button class="create" id="newQr">create qr code</button>
+                    <a id="link">
+                        <button class="download">download png</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
